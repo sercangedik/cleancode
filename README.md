@@ -131,3 +131,21 @@ they should be smaller than that.
 
 ## Chapter 11 - Systems
 
+* Dependency Injection
+* Scaling Up
+
+## Chapter 12 - Emergence 
+* Runs all the tests
+* Contains no duplication
+* Expresses the intent of the programmer
+* Minimizes the number of classes and methods
+
+## Chapter 13 - Smells and Heuristics
+* Obsolete (Modası Geçmiş) Comment
+* Poorly Written Comment
+* Commented-Out Code
+* No Argument is Best in Functions
+* Multiple Languages in One Source File
+* Code at Wrong Level of Abstraction
+* Replace Magic Numbers with Named Constants
+* Avoid Negative Conditionals
