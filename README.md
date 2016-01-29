@@ -5,7 +5,7 @@
 ### The Boy Scout Rule
 * Leave the campground cleaner than you found it.
 
-### **Üstadlar için Clean Code nedir ?**
+### **What is the clean code for masters ?**
 
 * **Bjarne Stroustrup :** Elegant and efficient.
 * **Grady Booch :** Simple and direct.
