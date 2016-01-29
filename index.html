@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Cleancode by sercangedik</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Cleancode</h1>
+          <h2></h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/sercangedik/cleancode/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/sercangedik/cleancode/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/sercangedik/cleancode" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1>
+<a id="clean-code" class="anchor" href="#clean-code" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Clean Code</h1>
+
+<p><img src="https://www.butterfly.com.au/images/easyblog_images/27/2e1ax_butterfly_entry_ARASH-clean-code.jpg" alt="alt tag"></p>
+
+<h2>
+<a id="chapter-1---clean-code" class="anchor" href="#chapter-1---clean-code" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Chapter 1 - Clean Code</h2>
+
+<h3>
+<a id="the-boy-scout-rule" class="anchor" href="#the-boy-scout-rule" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Boy Scout Rule</h3>
+
+<ul>
+<li>Leave the campground cleaner than you found it.</li>
+</ul>
+
+<h3>
+<a id="Üstadlar-için-clean-code-nedir-" class="anchor" href="#%C3%9Cstadlar-i%C3%A7in-clean-code-nedir-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><strong>Üstadlar için Clean Code nedir ?</strong>
+</h3>
+
+<ul>
+<li>
+<strong>Bjarne Stroustrup :</strong> Elegant and efficient.</li>
+<li>
+<strong>Grady Booch :</strong> Simple and direct.</li>
+<li>
+<strong>Michael Feathers :</strong> It looks like it was written by someone who cares.</li>
+<li>
+<strong>Ron Jeffries :</strong> Small, expressive, simple and no duplication.</li>
+</ul>
+
+<h2>
+<a id="chapter-2---meaningful-names" class="anchor" href="#chapter-2---meaningful-names" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Chapter 2 - Meaningful Names</h2>
+
+<ul>
+<li>Avoid disinformation</li>
+<li>Use pronounceable names</li>
+<li>Use searchable names</li>
+</ul>
+
+<div class="highlight highlight-source-java"><pre><span class="pl-k">final</span> <span class="pl-smi">Popup</span> popup <span class="pl-k">=</span> popupManager<span class="pl-k">.</span>get(stage, <span class="pl-s"><span class="pl-pds">"</span>/popup/friendRemovePopup.xml<span class="pl-pds">"</span></span>, <span class="pl-c1">true</span>, <span class="pl-c1">false</span>, <span class="pl-c1">0</span>);
+
+<span class="pl-k">float</span> ratio <span class="pl-k">=</span> (<span class="pl-k">float</span>)game<span class="pl-k">.</span>getHeight() <span class="pl-k">/</span> (<span class="pl-k">float</span>)graphics<span class="pl-k">.</span>getHeight() ;
+
+<span class="pl-c">//rakibin chat mesaji</span>
+chatBubble <span class="pl-k">=</span> (<span class="pl-smi">TextBalloon</span>) findActor(<span class="pl-s"><span class="pl-pds">"</span>chatBubbleTop<span class="pl-pds">"</span></span>);</pre></div>
+
+<h3>
+<a id="pick-one-word-per-concept" class="anchor" href="#pick-one-word-per-concept" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pick One Word per Concept</h3>
+
+<ul>
+<li>Controller</li>
+<li>Manager</li>
+<li>Driver</li>
+</ul>
+
+<p><img src="http://s27.postimg.org/g4knt0sir/Screen_Shot_2016_01_29_at_10_37_18.png" alt="">
+<img src="http://s30.postimg.org/v8ue5sz1d/Screen_Shot_2016_01_29_at_10_37_24.png" alt=""></p>
+
+<h3>
+<a id="dont-pun-kelime-oyunu" class="anchor" href="#dont-pun-kelime-oyunu" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Don't pun (kelime oyunu)</h3>
+
+<ul>
+<li>Shorter names are generally better than longer ones, so long as they are clear. Add no
+more context to a name than is necessary.</li>
+</ul>
+
+<h2>
+<a id="chapter-3---functions" class="anchor" href="#chapter-3---functions" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Chapter 3 - Functions</h2>
+
+<h3>
+<a id="small-" class="anchor" href="#small-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Small !</h3>
+
+<ul>
+<li>The first rule of functions is that they should be small. The second rule of functions is that
+they should be smaller than that.</li>
+</ul>
+
+<h3>
+<a id="do-one-thing" class="anchor" href="#do-one-thing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Do One Thing</h3>
+
+<ul>
+<li>Functions should do one thing. They should do it well. They sould do it only.</li>
+</ul>
+
+<p><img src="http://s15.postimg.org/ijk8vwnuj/Screen_Shot_2016_01_29_at_10_57_23.png" alt=""></p>
+
+<h3>
+<a id="the-stepdown-rule" class="anchor" href="#the-stepdown-rule" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Stepdown Rule</h3>
+
+<div class="highlight highlight-source-java"><pre> seeAMovie <span class="pl-k">=</span> ()<span class="pl-k">-</span><span class="pl-k">&gt;</span>
+     BuyTheTicket()
+     watch()
+
+ <span class="pl-smi">BuyTheTicket</span> <span class="pl-k">=</span> ()<span class="pl-k">-</span><span class="pl-k">&gt;</span>
+     <span class="pl-c">//some thing</span>
+
+ watch <span class="pl-k">=</span> () <span class="pl-k">-</span><span class="pl-k">&gt;</span>
+     <span class="pl-c">//some thing</span></pre></div>
+
+<h3>
+<a id="use-descriptive-names" class="anchor" href="#use-descriptive-names" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Use Descriptive Names</h3>
+
+<ul>
+<li>Don’t be afraid to make a name long. A long descriptive name is better than a short enigmatic name.</li>
+</ul>
+
+<div class="highlight highlight-source-java"><pre>    <span class="pl-k">public</span> <span class="pl-k">void</span> logFirstTypeTwoGameTimerHandledParameter(<span class="pl-smi">String</span> classDotMethod) {
+        sessionLogger<span class="pl-k">.</span>append(classDotMethod <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">"</span> - firstTypeTwoGameTimerHandled : <span class="pl-pds">"</span></span> <span class="pl-k">+</span> gameModel<span class="pl-k">.</span>isFirstTypeTwoGameTimerHandled());
+    }</pre></div>
+
+<h3>
+<a id="dont-repeat-yourself-" class="anchor" href="#dont-repeat-yourself-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Don't Repeat Yourself !</h3>
+
+<h2>
+<a id="chapter-4---comments" class="anchor" href="#chapter-4---comments" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Chapter 4 - Comments</h2>
+
+<h3>
+<a id="dont-comment-bad-coderewrite-it" class="anchor" href="#dont-comment-bad-coderewrite-it" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Don’t comment bad code—rewrite it.</h3>
+
+<ul>
+<li>Formatting</li>
+<li>Clarification</li>
+<li>TODO</li>
+<li>Journal</li>
+<li>Position Markers (Okey-101 ////////////////////////)</li>
+</ul>
+
+<h2>
+<a id="chapter-5---formatting" class="anchor" href="#chapter-5---formatting" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Chapter 5 - Formatting</h2>
+
+<ul>
+<li>Vertical Formatting</li>
+<li>Horizontal Formatting (80 character standard)</li>
+</ul>
+
+<p><img src="http://s22.postimg.org/6bu8auysx/Screen_Shot_2016_01_29_at_11_03_26.png" alt=""></p>
+
+<h3>
+<a id="team-rules" class="anchor" href="#team-rules" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Team Rules</h3>
+
+<ul>
+<li>A team of developers should agree upon a single formatting style.</li>
+</ul>
+
+<h2>
+<a id="chapter-6---objects-and-data-structures" class="anchor" href="#chapter-6---objects-and-data-structures" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Chapter 6 - Objects and Data Structures</h2>
+
+<h3>
+<a id="law-of-demeter" class="anchor" href="#law-of-demeter" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Law of Demeter</h3>
+
+<p><em>Talk to Friends Not to Strangers</em></p>
+
+<p>Function f which is inside class C can only call following functions</p>
+
+<ul>
+<li>Other functions of class C</li>
+<li>Functions of another object which is created inside f</li>
+<li>Functions of object which is passed as parameter to f</li>
+<li>Functions of another object which is an instance inside class C.</li>
+</ul>
+
+<h3>
+<a id="data-transfer-objects" class="anchor" href="#data-transfer-objects" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Data Transfer Objects</h3>
+
+<ul>
+<li>A class with public variables and no functions</li>
+</ul>
+
+<h3>
+<a id="train-wrecks" class="anchor" href="#train-wrecks" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Train Wrecks</h3>
+
+<div class="highlight highlight-source-java"><pre><span class="pl-smi">Options</span> opts <span class="pl-k">=</span> ctxt<span class="pl-k">.</span>getOptions();
+<span class="pl-smi">File</span> scratchDir <span class="pl-k">=</span> opts<span class="pl-k">.</span>getScratchDir();
+<span class="pl-k">final</span> <span class="pl-smi">String</span> outputDir <span class="pl-k">=</span> scratchDir<span class="pl-k">.</span>getAbsolutePath();
+
+
+<span class="pl-k">final</span> <span class="pl-smi">String</span> outputDir <span class="pl-k">=</span> ctxt<span class="pl-k">.</span>options<span class="pl-k">.</span>scratchDir<span class="pl-k">.</span>absolutePath;</pre></div>
+
+<h2>
+<a id="chapter-7---error-handling" class="anchor" href="#chapter-7---error-handling" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Chapter 7 - Error Handling</h2>
+
+<h3>
+<a id="use-exceptions-rather-than-return-codes" class="anchor" href="#use-exceptions-rather-than-return-codes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Use Exceptions Rather Than Return Codes</h3>
+
+<ul>
+<li>It is easy to forget</li>
+<li>Provide context with exceptions</li>
+</ul>
+
+<h3>
+<a id="avoid-pass-null--return-null" class="anchor" href="#avoid-pass-null--return-null" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Avoid pass null &amp;&amp; return null</h3>
+
+<h2>
+<a id="chapter-8---boundaries" class="anchor" href="#chapter-8---boundaries" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Chapter 8 - Boundaries</h2>
+
+<ul>
+<li>Write test for the third-party code for understanding</li>
+<li>Abstraction</li>
+</ul>
+
+<h2>
+<a id="chapter-9---unit-tests" class="anchor" href="#chapter-9---unit-tests" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Chapter 9 - Unit Tests</h2>
+
+<h3>
+<a id="the-three-laws-of-tdd" class="anchor" href="#the-three-laws-of-tdd" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Three Laws of TDD</h3>
+
+<ul>
+<li>You may not write production code until you have written a failing unit test.</li>
+<li>You may not write more of a unit test than is sufficient to fail, and not compiling is failing.</li>
+<li>You may not write more production code than is sufficient to pass the currently failing test.</li>
+</ul>
+
+<h3>
+<a id="tests-enable-the--ilities" class="anchor" href="#tests-enable-the--ilities" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tests enable the -ilities</h3>
+
+<ul>
+<li>Flexible</li>
+<li>Maintainable</li>
+<li>Reusable</li>
+</ul>
+
+<h3>
+<a id="why-" class="anchor" href="#why-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Why ?</h3>
+
+<ul>
+<li>If you have tests, you do not fear making changes to the code.</li>
+</ul>
+
+<h3>
+<a id="keeping-test-clean" class="anchor" href="#keeping-test-clean" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Keeping test clean</h3>
+
+<ul>
+<li>Readability</li>
+<li>Readability</li>
+<li>Readability</li>
+</ul>
+
+<h3>
+<a id="one-assert-per-test" class="anchor" href="#one-assert-per-test" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>One Assert per Test</h3>
+
+<ul>
+<li>Single conclusion that is quick and easy to understand.</li>
+</ul>
+
+<div class="highlight highlight-source-java"><pre>    @<span class="pl-smi">Test</span>
+    <span class="pl-k">public</span> <span class="pl-k">void</span> emptyFriendsModel() {
+        <span class="pl-smi">FriendsModel</span> friendsModel <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">FriendsModel</span>();
+        <span class="pl-smi">Assert</span><span class="pl-k">.</span>assertEquals(friendsModel<span class="pl-k">.</span>toString(), <span class="pl-s"><span class="pl-pds">"</span>FriendsModel [gameFriends -&gt; 0], [installedFriends -&gt; 0], [notInstalledFriends -&gt; 0]<span class="pl-pds">"</span></span>);
+    }</pre></div>
+
+<h3>
+<a id="single-concept-per-test" class="anchor" href="#single-concept-per-test" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Single Concept per Test</h3>
+
+<ul>
+<li>Test a single concept in each test function.</li>
+</ul>
+
+<div class="highlight highlight-source-java"><pre>    @<span class="pl-smi">Test</span>
+    <span class="pl-k">public</span> <span class="pl-k">void</span> test_MatchType() {
+        <span class="pl-smi">TournamentTableModel</span><span class="pl-k">.</span><span class="pl-smi">MatchType</span> matchType <span class="pl-k">=</span> <span class="pl-smi">TournamentTableModel</span><span class="pl-k">.</span><span class="pl-smi">MatchType</span><span class="pl-k">.</span>matchTypeByRound(<span class="pl-c1">0</span>);
+        assertEquals(matchType, <span class="pl-smi">TournamentTableModel</span><span class="pl-k">.</span><span class="pl-smi">MatchType</span><span class="pl-c1"><span class="pl-k">.</span>QUARTER_FINAL</span>);
+        assertEquals(matchType<span class="pl-k">.</span>getStage(), <span class="pl-c1">1</span>);
+        matchType <span class="pl-k">=</span> <span class="pl-smi">TournamentTableModel</span><span class="pl-k">.</span><span class="pl-smi">MatchType</span><span class="pl-k">.</span>matchTypeByRound(<span class="pl-c1">1</span>);
+        assertEquals(matchType, <span class="pl-smi">TournamentTableModel</span><span class="pl-k">.</span><span class="pl-smi">MatchType</span><span class="pl-c1"><span class="pl-k">.</span>SEMI_FINAL</span>);
+        assertEquals(matchType<span class="pl-k">.</span>getStage(), <span class="pl-c1">2</span>);
+        matchType <span class="pl-k">=</span> <span class="pl-smi">TournamentTableModel</span><span class="pl-k">.</span><span class="pl-smi">MatchType</span><span class="pl-k">.</span>matchTypeByRound(<span class="pl-c1">2</span>);
+        assertEquals(matchType, <span class="pl-smi">TournamentTableModel</span><span class="pl-k">.</span><span class="pl-smi">MatchType</span><span class="pl-c1"><span class="pl-k">.</span>FINAL</span>);
+        assertEquals(matchType<span class="pl-k">.</span>getStage(), <span class="pl-c1">3</span>);
+        matchType <span class="pl-k">=</span> <span class="pl-smi">TournamentTableModel</span><span class="pl-k">.</span><span class="pl-smi">MatchType</span><span class="pl-k">.</span>matchTypeByRound(<span class="pl-c1">1124</span>);
+        assertEquals(matchType, <span class="pl-smi">TournamentTableModel</span><span class="pl-k">.</span><span class="pl-smi">MatchType</span><span class="pl-c1"><span class="pl-k">.</span>EMPTY</span>);
+
+        assertTrue(<span class="pl-smi">TournamentTableModel</span><span class="pl-k">.</span><span class="pl-smi">MatchType</span><span class="pl-c1"><span class="pl-k">.</span>SEMI_FINAL</span><span class="pl-k">.</span>isBiggerThanOrEqualTo(<span class="pl-smi">TournamentTableModel</span><span class="pl-k">.</span><span class="pl-smi">MatchType</span><span class="pl-c1"><span class="pl-k">.</span>QUARTER_FINAL</span>));
+        assertTrue(<span class="pl-smi">TournamentTableModel</span><span class="pl-k">.</span><span class="pl-smi">MatchType</span><span class="pl-c1"><span class="pl-k">.</span>FINAL</span><span class="pl-k">.</span>isBiggerThanOrEqualTo(<span class="pl-smi">TournamentTableModel</span><span class="pl-k">.</span><span class="pl-smi">MatchType</span><span class="pl-c1"><span class="pl-k">.</span>SEMI_FINAL</span>));
+        assertTrue(<span class="pl-smi">TournamentTableModel</span><span class="pl-k">.</span><span class="pl-smi">MatchType</span><span class="pl-c1"><span class="pl-k">.</span>FINAL</span><span class="pl-k">.</span>isBiggerThanOrEqualTo(<span class="pl-smi">TournamentTableModel</span><span class="pl-k">.</span><span class="pl-smi">MatchType</span><span class="pl-c1"><span class="pl-k">.</span>QUARTER_FINAL</span>));
+    }</pre></div>
+
+<h3>
+<a id="first" class="anchor" href="#first" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>F.I.R.S.T.</h3>
+
+<ul>
+<li>Fast (Tests should be fast)</li>
+<li>Independent (Tests should not depend on each other)</li>
+<li>Repeatable (Tests should be repeatable in any environment)</li>
+<li>Self Validating (The tests should have a boolean output)</li>
+<li>Timely (The tests need to be written in a timely fashion)</li>
+</ul>
+
+<h2>
+<a id="chapter-10---classes" class="anchor" href="#chapter-10---classes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Chapter 10 - Classes</h2>
+
+<ul>
+<li>Again stepdown rule</li>
+<li>Classes should be small </li>
+<li>The single responsibility principle (One responsibility—one reason to change)</li>
+</ul>
+
+<h2>
+<a id="chapter-11---systems" class="anchor" href="#chapter-11---systems" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Chapter 11 - Systems</h2>
+
+<ul>
+<li>Dependency Injection</li>
+<li>Scaling Up</li>
+</ul>
+
+<h2>
+<a id="chapter-12---emergence" class="anchor" href="#chapter-12---emergence" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Chapter 12 - Emergence</h2>
+
+<ul>
+<li>Runs all the tests</li>
+<li>Contains no duplication</li>
+<li>Expresses the intent of the programmer</li>
+<li>Minimizes the number of classes and methods</li>
+</ul>
+
+<h2>
+<a id="chapter-13---smells-and-heuristics" class="anchor" href="#chapter-13---smells-and-heuristics" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Chapter 13 - Smells and Heuristics</h2>
+
+<ul>
+<li>Obsolete (Modası Geçmiş) Comment</li>
+<li>Poorly Written Comment</li>
+<li>Commented-Out Code</li>
+<li>No Argument is Best in Functions</li>
+<li>Multiple Languages in One Source File</li>
+<li>Code at Wrong Level of Abstraction</li>
+<li>Replace Magic Numbers with Named Constants</li>
+<li>Avoid Negative Conditionals</li>
+</ul>
+        </section>
+
+        <footer>
+          Cleancode is maintained by <a href="https://github.com/sercangedik">sercangedik</a><br>
+          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
